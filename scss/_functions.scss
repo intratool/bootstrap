@@ -67,10 +67,6 @@
   }
 }
 
-@mixin color-yiq($color, $contrast-colors: ()) {
-  color: color-yiq($color, $contrast-colors);
-}
-
 // Retreive color Sass maps
 @function color($key: "blue") {
   @return map-get($colors, $key);
