@@ -71,9 +71,9 @@ fieldset:disabled a.btn {
 
   .btn-outline-#{$color} {
     @if $value == $white {
-      @include button-outline-variant(color-yiq($value, $btn-contrast-colors), $white);
+      @include button-outline-variant(color-yiq($value, $btn-contrast-colors));
     } @else {
-      @include button-outline-variant($value, $white);
+      @include button-outline-variant($value);
     }
   }
 }
