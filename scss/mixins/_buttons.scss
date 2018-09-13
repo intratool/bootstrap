@@ -56,8 +56,6 @@
 
 @mixin button-outline-variant($color, $color-hover: color-yiq($color, $btn-contrast-colors), $active-background: $color, $active-border: $color, $contrast-colors: $btn-contrast-colors) {
   color: $color;
-  background-color: transparent;
-  background-image: none;
   border-color: $color;
 
   &:hover {

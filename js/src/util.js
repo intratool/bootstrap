@@ -77,8 +77,9 @@ const Util = (($) => {
 
     getSelectorFromElement(element) {
       let selector = element.getAttribute('data-target')
+
       if (!selector || selector === '#') {
-        selector = element.getAttribute('href') || ''
+        selector = (element.getAttribute('href') || '').trim()
       }
 
       try {
