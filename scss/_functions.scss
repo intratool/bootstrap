@@ -49,7 +49,7 @@
 }
 
 // Color contrast
-@function color-yiq($color, $contrast-colors: ()) {
+@function color-yiq($color, $dark: $yiq-text-dark, $light: $yiq-text-light, $contrast-colors: ()) {
   @if map-has-key($contrast-colors, $color) {
     @return map-get($contrast-colors, $color);
   }
@@ -61,9 +61,9 @@
   $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
 
   @if ($yiq >= $yiq-contrasted-threshold) {
-    @return $yiq-text-dark;
+    @return $dark;
   } @else {
-    @return $yiq-text-light;
+    @return $light;
   }
 }
 
